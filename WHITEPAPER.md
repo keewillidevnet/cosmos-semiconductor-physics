@@ -783,7 +783,7 @@ The semiconductor industry enabled the AI revolution. It's time for AI to return
 
 - Network Engineer & Developer
 - IETF Internet-Draft development experience
-- FEA, CFD, photnic quantum computing, LLM/SLM/Tiny LM, & Robotics enthusiast
+- FEA, CFD, photonic quantum computing, LLM/SLM/Tiny LM, & Robotics enthusiast
 
 ---
 
