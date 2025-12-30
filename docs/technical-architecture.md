@@ -10,64 +10,64 @@ CSP employs a multi-modal architecture combining domain-specific physics encoder
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                     COSMOS FOR SEMICONDUCTOR PHYSICS                     │
+│                     COSMOS FOR SEMICONDUCTOR PHYSICS                    │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
 │  INPUT LAYER                                                            │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐       │
-│  │ Device Spec │ │Process Param│ │Material Prop│ │Target Metric│       │
-│  └──────┬──────┘ └──────┬──────┘ └──────┬──────┘ └──────┬──────┘       │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐        │
+│  │ Device Spec │ │Process Param│ │Material Prop│ │Target Metric│        │
+│  └──────┬──────┘ └──────┬──────┘ └──────┬──────┘ └──────┬──────┘        │
 │         └───────────────┴───────────────┴───────────────┘               │
 │                                   │                                     │
 │  PHYSICS ENCODERS                 ▼                                     │
-│  ┌──────────────────────────────────────────────────────────────────┐  │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐            │  │
-│  │  │   EUV    │ │  Plasma  │ │ Quantum  │ │  Thermo  │            │  │
-│  │  │ Encoder  │ │ Encoder  │ │Transport │ │Mechanical│            │  │
-│  │  │          │ │          │ │ Encoder  │ │ Encoder  │            │  │
-│  │  │ •Photon  │ │ •Ion flux│ │ •NEGF    │ │ •Stress  │            │  │
-│  │  │  absorb  │ │ •Radical │ │ •Tunnel  │ │ •Thermal │            │  │
-│  │  │ •Resist  │ │ •Surface │ │ •Band    │ │ •Warpage │            │  │
-│  │  │  chem    │ │  react   │ │  struct  │ │ •Electro │            │  │
-│  │  │ •Mask 3D │ │ •Profile │ │ •Carrier │ │  migrate │            │  │
-│  │  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘            │  │
-│  └───────┼────────────┼────────────┼────────────┼───────────────────┘  │
-│          └────────────┴─────┬──────┴────────────┘                      │
-│                             │                                          │
-│  CROSS-DOMAIN REASONING     ▼                                          │
-│  ┌──────────────────────────────────────────────────────────────────┐  │
-│  │                    CROSS-DOMAIN ATTENTION                        │  │
-│  │  ┌────────────────────────────────────────────────────────────┐  │  │
-│  │  │  • How does LER from litho affect quantum transport?       │  │  │
-│  │  │  • How do thermal budgets constrain doping profiles?       │  │  │
-│  │  │  • How does etch selectivity depend on deposition?         │  │  │
-│  │  │  • What material combinations minimize interface states?   │  │  │
-│  │  └────────────────────────────────────────────────────────────┘  │  │
-│  └──────────────────────────────┬───────────────────────────────────┘  │
-│                                 │                                      │
-│  SEQUENTIAL MODELING            ▼                                      │
-│  ┌──────────────────────────────────────────────────────────────────┐  │
-│  │                   PROCESS FLOW TRANSFORMER                       │  │
-│  │  ┌──────┐   ┌──────┐   ┌──────┐   ┌──────┐       ┌──────┐      │  │
-│  │  │Step 1│──▶│Step 2│──▶│Step 3│──▶│Step 4│──▶...│Step N│      │  │
-│  │  │ Dep  │   │ Litho│   │ Etch │   │ Clean│       │ Metal│      │  │
-│  │  └──────┘   └──────┘   └──────┘   └──────┘       └──────┘      │  │
-│  │                                                                  │  │
-│  │  State tracking: thermal budget, contamination, stress, etc.    │  │
-│  └──────────────────────────────┬───────────────────────────────────┘  │
-│                                 │                                      │
-│  OUTPUT HEADS                   ▼                                      │
-│  ┌──────────────────────────────────────────────────────────────────┐  │
-│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │  │
-│  │  │   Device    │  │   Process   │  │    Yield    │              │  │
-│  │  │  Generator  │  │  Generator  │  │  Predictor  │              │  │
-│  │  │             │  │             │  │             │              │  │
-│  │  │ •Geometry   │  │ •Recipe seq │  │ •Defect     │              │  │
-│  │  │ •Materials  │  │ •Parameters │  │  density    │              │  │
-│  │  │ •Doping     │  │ •Tolerances │  │ •Variability│              │  │
-│  │  │ •Contacts   │  │ •Sequence   │  │ •Binning    │              │  │
-│  │  └─────────────┘  └─────────────┘  └─────────────┘              │  │
-│  └──────────────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────────────┐   │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐             │   │
+│  │  │   EUV    │ │  Plasma  │ │ Quantum  │ │  Thermo  │             │   │
+│  │  │ Encoder  │ │ Encoder  │ │Transport │ │Mechanical│             │   │
+│  │  │          │ │          │ │ Encoder  │ │ Encoder  │             │   │
+│  │  │ •Photon  │ │ •Ion flux│ │ •NEGF    │ │ •Stress  │             │   │
+│  │  │  absorb  │ │ •Radical │ │ •Tunnel  │ │ •Thermal │             │   │
+│  │  │ •Resist  │ │ •Surface │ │ •Band    │ │ •Warpage │             │   │
+│  │  │  chem    │ │  react   │ │  struct  │ │ •Electro │             │   │
+│  │  │ •Mask 3D │ │ •Profile │ │ •Carrier │ │  migrate │             │   │
+│  │  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘             │   │ 
+│  └───────┼────────────┼────────────┼────────────┼───────────────────┘   │
+│          └────────────┴─────┬──────┴────────────┘                       │
+│                             │                                           │
+│  CROSS-DOMAIN REASONING     ▼                                           │
+│  ┌──────────────────────────────────────────────────────────────────┐   │
+│  │                    CROSS-DOMAIN ATTENTION                        │   │
+│  │  ┌────────────────────────────────────────────────────────────┐  │   │
+│  │  │  • How does LER from litho affect quantum transport?       │  │   │
+│  │  │  • How do thermal budgets constrain doping profiles?       │  │   │
+│  │  │  • How does etch selectivity depend on deposition?         │  │   │
+│  │  │  • What material combinations minimize interface states?   │  │   │
+│  │  └────────────────────────────────────────────────────────────┘  │   │
+│  └──────────────────────────────┬───────────────────────────────────┘   │
+│                                 │                                       │
+│  SEQUENTIAL MODELING            ▼                                       │
+│  ┌──────────────────────────────────────────────────────────────────┐   │
+│  │                   PROCESS FLOW TRANSFORMER                       │   │
+│  │  ┌──────┐   ┌──────┐   ┌──────┐   ┌──────┐       ┌──────┐        │   │
+│  │  │Step 1│──▶│Step 2│──▶│Step 3│──▶│Step 4│──▶... │Step N│        │   │
+│  │  │ Dep  │   │ Litho│   │ Etch │   │ Clean│       │ Metal│        │   │
+│  │  └──────┘   └──────┘   └──────┘   └──────┘       └──────┘        │   │
+│  │                                                                  │   │
+│  │  State tracking: thermal budget, contamination, stress, etc.     │   │
+│  └──────────────────────────────┬───────────────────────────────────┘   │
+│                                 │                                       │
+│  OUTPUT HEADS                   ▼                                       │
+│  ┌──────────────────────────────────────────────────────────────────┐   │
+│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐               │   │
+│  │  │   Device    │  │   Process   │  │    Yield    │               │   │
+│  │  │  Generator  │  │  Generator  │  │  Predictor  │               │   │
+│  │  │             │  │             │  │             │               │   │
+│  │  │ •Geometry   │  │ •Recipe seq │  │ •Defect     │               │   │
+│  │  │ •Materials  │  │ •Parameters │  │  density    │               │   │
+│  │  │ •Doping     │  │ •Tolerances │  │ •Variability│               │   │
+│  │  │ •Contacts   │  │ •Sequence   │  │ •Binning    │               │   │
+│  │  └─────────────┘  └─────────────┘  └─────────────┘               │   │
+│  └──────────────────────────────────────────────────────────────────┘   │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
