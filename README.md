@@ -139,8 +139,7 @@ This proposal and associated documentation are provided under the [BSD 3-Clause 
 ## Contact
 
 **Author:** Keenan Williams  
-**Email:** telesis001@icloud.com  
-**GitHub:** [@keewillidevnet](https://github.com/keewillidevnet)
+**Email:** telesis001@icloud.com
 
 ---
 
