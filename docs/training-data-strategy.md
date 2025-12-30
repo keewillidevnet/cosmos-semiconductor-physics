@@ -23,43 +23,43 @@ CSP leverages four complementary data sources:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        DATA SOURCE HIERARCHY                         │
+│                        DATA SOURCE HIERARCHY                        │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │  TIER 1: FIRST-PRINCIPLES SIMULATIONS (Synthetic)           │   │
-│  │  • Ground truth physics                                      │   │
-│  │  • No IP concerns                                            │   │
-│  │  • Systematic coverage                                       │   │
-│  │  Volume: 10⁷ - 10⁸ simulations                              │   │
-│  └─────────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────┐    │
+│  │  TIER 1: FIRST-PRINCIPLES SIMULATIONS (Synthetic)           │    │
+│  │  • Ground truth physics                                     │    │
+│  │  • No IP concerns                                           │    │
+│  │  • Systematic coverage                                      │    │
+│  │  Volume: 10⁷ - 10⁸ simulations                              │    │
+│  └─────────────────────────────────────────────────────────────┘    │
 │                              │                                      │
 │                              ▼                                      │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │  TIER 2: RESEARCH FAB DATA (Semi-Public)                    │   │
-│  │  • Real process data                                         │   │
-│  │  • Accessible via partnerships                               │   │
-│  │  • Diverse process conditions                                │   │
-│  │  Volume: 10⁵ - 10⁶ wafer lots                               │   │
-│  └─────────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────┐    │
+│  │  TIER 2: RESEARCH FAB DATA (Semi-Public)                    │    │
+│  │  • Real process data                                        │    │
+│  │  • Accessible via partnerships                              │    │
+│  │  • Diverse process conditions                               │    │
+│  │  Volume: 10⁵ - 10⁶ wafer lots                               │    │
+│  └─────────────────────────────────────────────────────────────┘    │
 │                              │                                      │
 │                              ▼                                      │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │  TIER 3: PRODUCTION FAB DATA (TSMC Partnership)             │   │
-│  │  • Leading-edge process data                                 │   │
-│  │  • High-volume manufacturing insights                        │   │
-│  │  • Requires trust relationship                               │   │
-│  │  Volume: Selective, high-value                              │   │
-│  └─────────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────┐    │
+│  │  TIER 3: PRODUCTION FAB DATA (TSMC Partnership)             │    │
+│  │  • Leading-edge process data                                │    │
+│  │  • High-volume manufacturing insights                       │    │
+│  │  • Requires trust relationship                              │    │
+│  │  Volume: Selective, high-value                              │    │
+│  └─────────────────────────────────────────────────────────────┘    │
 │                              │                                      │
 │                              ▼                                      │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │  TIER 4: PUBLISHED LITERATURE (Public)                      │   │
-│  │  • Process recipes (often incomplete)                        │   │
-│  │  • Device characteristics                                    │   │
-│  │  • Failure analysis                                          │   │
-│  │  Volume: 100,000+ papers                                    │   │
-│  └─────────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────────┐    │
+│  │  TIER 4: PUBLISHED LITERATURE (Public)                      │    │
+│  │  • Process recipes (often incomplete)                       │    │
+│  │  • Device characteristics                                   │    │
+│  │  • Failure analysis                                         │    │
+│  │  Volume: 100,000+ papers                                    │    │
+│  └─────────────────────────────────────────────────────────────┘    │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
@@ -207,16 +207,16 @@ Research fabs can provide:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    RESEARCH FAB PARTNERSHIP                      │
+│                    RESEARCH FAB PARTNERSHIP                     │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  NVIDIA Provides:              Research Fab Provides:           │
-│  ┌─────────────────────┐      ┌─────────────────────┐          │
-│  │ • GPU compute       │      │ • Process data      │          │
-│  │ • Model development │◀────▶│ • Fab access        │          │
-│  │ • ML expertise      │      │ • Domain expertise  │          │
-│  │ • Publication rights│      │ • Validation runs   │          │
-│  └─────────────────────┘      └─────────────────────┘          │
+│  ┌─────────────────────┐      ┌─────────────────────┐           │
+│  │ • GPU compute       │      │ • Process data      │           │
+│  │ • Model development │◀────▶│ • Fab access        │           │
+│  │ • ML expertise      │      │ • Domain expertise  │           │
+│  │ • Publication rights│      │ • Validation runs   │           │
+│  └─────────────────────┘      └─────────────────────┘           │
 │                                                                 │
 │  Joint Outcomes:                                                │
 │  • Co-authored publications                                     │
@@ -243,34 +243,34 @@ The cuLitho collaboration has established:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    TSMC DATA ACCESS MODEL                        │
+│                    TSMC DATA ACCESS MODEL                       │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  Phase 1: Aggregated/Anonymized                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ • Statistical distributions (not individual recipes)    │   │
-│  │ • Process windows and margins                           │   │
-│  │ • Yield correlations (aggregated)                       │   │
-│  │ • Defect statistics                                     │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ • Statistical distributions (not individual recipes)    │    │
+│  │ • Process windows and margins                           │    │
+│  │ • Yield correlations (aggregated)                       │    │
+│  │ • Defect statistics                                     │    │
+│  └─────────────────────────────────────────────────────────┘    │
 │                              │                                  │
 │                              ▼                                  │
 │  Phase 2: Federated Learning                                    │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ • Model trained on TSMC premises                        │   │
-│  │ • Only model weights transferred (not data)             │   │
-│  │ • TSMC maintains data sovereignty                       │   │
-│  │ • Joint validation on held-out data                     │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ • Model trained on TSMC premises                        │    │
+│  │ • Only model weights transferred (not data)             │    │
+│  │ • TSMC maintains data sovereignty                       │    │
+│  │ • Joint validation on held-out data                     │    │
+│  └─────────────────────────────────────────────────────────┘    │
 │                              │                                  │
 │                              ▼                                  │
-│  Phase 3: Secure Enclave (Future)                              │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ • Confidential computing environment                    │   │
-│  │ • Data never leaves encrypted enclave                   │   │
-│  │ • Cryptographic verification of computations            │   │
-│  │ • Full data access with privacy guarantees              │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  Phase 3: Secure Enclave (Future)                               │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ • Confidential computing environment                    │    │
+│  │ • Data never leaves encrypted enclave                   │    │
+│  │ • Cryptographic verification of computations            │    │
+│  │ • Full data access with privacy guarantees              │    │
+│  └─────────────────────────────────────────────────────────┘    │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -414,13 +414,13 @@ class DataNormalizer:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                      DATA PIPELINE ARCHITECTURE                      │
+│                      DATA PIPELINE ARCHITECTURE                     │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐           │
-│  │   TCAD   │  │ Research │  │   TSMC   │  │Literature│           │
-│  │Simulations│  │   Fabs   │  │(Federated)│  │  Mining  │           │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘           │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐             │
+│  │   TCAD   │  │ Research │  │   TSMC   │  │Literature│             │
+│  │   Sims   │  │   Fabs   │  │Federated │  │  Mining  │             │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘             │
 │       │             │             │             │                   │
 │       └─────────────┴──────┬──────┴─────────────┘                   │
 │                            │                                        │
