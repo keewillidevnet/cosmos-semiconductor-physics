@@ -4,9 +4,9 @@
 
 ## Overview
 
-This repository contains the proposal and technical documentation for **Cosmos for Semiconductor Physics (CSP)** — a generative AI system designed to discover innovations in semiconductor fabrication, not just optimize existing processes.
+This repository contains the proposal and technical documentation for **Cosmos for Semiconductor Physics (CSP)** ; a generative AI system designed to discover innovations in semiconductor fabrication, not just optimize existing processes.
 
-Analogous to how NVIDIA Cosmos enables physical AI for robotics by encoding real-world physics, CSP would encode the multi-physics phenomena governing chip fabrication—from EUV photon-resist interactions to quantum transport in sub-2nm channels.
+Analogous to how NVIDIA Cosmos enables physical AI for robotics by encoding real-world physics, CSP would encode the multi-physics phenomena governing chip fabrication from EUV photon-resist interactions to quantum transport in sub-2nm channels.
 
 ## Repository Structure
 
@@ -61,26 +61,26 @@ CSP would be a **physics-native generative foundation model** trained to:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Cosmos for Semiconductor Physics              │
+│                    Cosmos for Semiconductor Physics             │
 ├─────────────────────────────────────────────────────────────────┤
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐           │
-│  │   EUV    │ │  Plasma  │ │ Quantum  │ │  Thermo  │           │
-│  │ Encoder  │ │ Encoder  │ │ Encoder  │ │ Encoder  │           │
-│  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘           │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐            │
+│  │   EUV    │ │  Plasma  │ │ Quantum  │ │  Thermo  │            │
+│  │ Encoder  │ │ Encoder  │ │ Encoder  │ │ Encoder  │            │
+│  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘            │ 
 │       └────────────┴─────┬──────┴────────────┘                  │
 │                   ┌──────▼──────┐                               │
-│                   │ Cross-Domain │                               │
-│                   │  Attention   │                               │
+│                   │ Cross-Domain │                              │
+│                   │  Attention   │                              │
 │                   └──────┬──────┘                               │
 │                   ┌──────▼──────┐                               │
 │                   │Process Flow │                               │
 │                   │ Transformer │                               │
 │                   └──────┬──────┘                               │
 │            ┌─────────────┼─────────────┐                        │
-│     ┌──────▼─────┐ ┌─────▼─────┐ ┌─────▼──────┐                │
-│     │  Device    │ │  Process  │ │   Yield    │                │
-│     │ Generator  │ │ Generator │ │ Predictor  │                │
-│     └────────────┘ └───────────┘ └────────────┘                │
+│     ┌──────▼─────┐ ┌─────▼─────┐ ┌─────▼──────┐                 │
+│     │  Device    │ │  Process  │ │   Yield    │                 │
+│     │ Generator  │ │ Generator │ │ Predictor  │                 │
+│     └────────────┘ └───────────┘ └────────────┘                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -140,7 +140,6 @@ This proposal and associated documentation are provided under the [BSD 3-Clause 
 
 **Author:** Keenan Williams  
 **Email:** telesis001@icloud.com  
-**LinkedIn:** [Your LinkedIn]  
 **GitHub:** [@keewillidevnet](https://github.com/keewillidevnet)
 
 ---
