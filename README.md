@@ -89,7 +89,7 @@ CSP would be a **physics-native generative foundation model** trained to:
 The existing NVIDIA-TSMC relationship provides a unique pathway:
 
 - **cuLitho** is already in production at TSMC (45-60x speedup)
-- Data-sharing infrastructure exists
+- Data sharing infrastructure exists
 - Jensen Huang and Morris Chang have a long-standing partnership
 - NVIDIA's products depend on TSMC's continued scaling
 
