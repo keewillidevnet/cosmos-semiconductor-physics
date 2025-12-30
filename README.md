@@ -69,8 +69,8 @@ CSP would be a **physics-native generative foundation model** trained to:
 │  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘            │ 
 │       └────────────┴─────┬──────┴────────────┘                  │
 │                   ┌──────▼──────┐                               │
-│                   │ Cross-Domain │                              │
-│                   │  Attention   │                              │
+│                   │ Cross-Domain│                               │
+│                   │  Attention  │                               │
 │                   └──────┬──────┘                               │
 │                   ┌──────▼──────┐                               │
 │                   │Process Flow │                               │
