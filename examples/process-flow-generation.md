@@ -2,7 +2,7 @@
 
 ## Overview
 
-This example demonstrates CSP's ability to generate complete, manufacturable process flows for novel device structures—one of the most time-consuming aspects of semiconductor R&D.
+This example demonstrates CSP's ability to generate complete, manufacturable process flows for novel device structures; one of the most time consuming aspects of semiconductor R&D.
 
 ---
 
