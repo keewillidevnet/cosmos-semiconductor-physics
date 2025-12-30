@@ -144,11 +144,4 @@ This proposal and associated documentation are provided under the [BSD 3-Clause 
 
 ---
 
-### Related Projects
-
-- [lm-hierarchy-topology](https://github.com/keewillidevnet/lm-hierarchy-topology) - IETF Internet-Draft for LM coordination
-- [UniLoRa Mesh](https://github.com/keewillidevnet/unilora-mesh) - Spatial AI coordination system
-
----
-
 **⭐ Star this repo if you find it valuable!**
