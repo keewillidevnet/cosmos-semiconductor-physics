@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains the proposal and technical documentation for **Cosmos for Semiconductor Physics (CSP)** ; a generative AI system designed to discover innovations in semiconductor fabrication not just optimize existing processes.
+This repository contains the proposal and technical documentation for **Cosmos for Semiconductor Physics (CSP)** ; a generative AI system designed to discover innovations in semiconductor fabrication.
 
 Analogous to how NVIDIA Cosmos enables physical AI for robotics by encoding real world physics, CSP would encode the multi-physics phenomena governing chip fabrication from EUV photon-resist interactions to quantum transport in sub 2nm channels.
 
